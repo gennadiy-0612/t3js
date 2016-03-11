@@ -1,0 +1,12 @@
+// Since T3 exports Box as a namespace, assign a shortcut Application to Box.Application
+var Application = Box.Application;
+Application.init({
+    debug: true
+});
+Application.on('error', function(event) {
+
+    var exception = event.exception;
+
+    // do something with the exception
+    console.log(exception);
+});
